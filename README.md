@@ -5,6 +5,8 @@
 一个纯文本 Agent Skill——`SKILL.md`（给智能体读的流程）+ 6 篇 `references/`（字段全表与踩坑）+ 1 个只读 Python 脚本。
 **不收集凭据、不自己发写请求**：所有写入仍由人或 agent 显式执行 `gh api -X PUT/PATCH`，脚本只做「采集 / 基线 / 校验」。
 
+![checks](https://github.com/pj1433139082-hue/github-repo-settings/actions/workflows/checks.yml/badge.svg)
+
 适用于遵循 `SKILL.md` 约定（frontmatter 里写 `name` 与 `description`）的智能体，例如 Claude Code 及其兼容实现。
 
 ## 它解决什么
