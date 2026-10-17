@@ -1,0 +1,9 @@
+# 文本一律 LF（本仓纪律之一：CI 会检查 CRLF）
+* text=auto eol=lf
+
+# 二进制文件不参与行尾处理
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary

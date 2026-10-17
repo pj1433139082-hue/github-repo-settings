@@ -1,0 +1,41 @@
+name: 💡 Feature Request / 功能建议
+description: 建议新增的字段覆盖、命令或参考文档。
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        本技能刻意只覆盖「在真实仓库上跑通过」的那一层（见 [SKILL.md 的「边界」](../../blob/main/SKILL.md#边界)）。
+        auto-merge、reusable workflow、Dependabot / Renovate 配置、组织级设置都在边界外——提之前请先确认不在边界内。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 建议类型
+      options:
+        - 新增设置项覆盖（例如某个分支保护字段）
+        - 脚本能力（snapshot / survey / check）
+        - 文档与参考
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 你遇到的问题
+      description: 描述场景，而不是直接给方案。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 期望的解法
+      description: 你希望它怎么工作；有 API / 文档出处请附链接。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 你验证过的依据（可选）
+      description: 例如某条 gh api 命令的真实输出。没有实测依据的建议也可以提，但请注明「未验证」。
+      render: shell

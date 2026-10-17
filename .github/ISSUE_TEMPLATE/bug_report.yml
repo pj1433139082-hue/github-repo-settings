@@ -1,0 +1,57 @@
+name: 🐛 Bug Report / 缺陷反馈
+description: 报告可复现的问题：脚本报错、核查结果不对、文档与实测不符。
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        先看 [README 的「已知限制」](../../#已知限制) 与 [pitfalls](../../blob/main/references/pitfalls.md)，那几类问题已有定论。
+        没有版本信息的报告通常无法复现——请把环境填全。
+  - type: dropdown
+    id: area
+    attributes:
+      label: 影响范围
+      options:
+        - 脚本（scripts/gh_repo_baseline.py）
+        - 文档 / 参考（references/）
+        - CI / workflow
+        - 安装 / 目录结构
+        - 不确定
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 环境
+      description: 操作系统 / gh 版本 / Python 版本
+      placeholder: "Windows 11 26100 / gh 2.89.0 / Python 3.13.9"
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: 复现步骤
+      description: 逐步贴出完整命令与输入；有输出就贴输出。
+      render: shell
+      placeholder: |
+        python scripts/gh_repo_baseline.py snapshot OWNER/REPO -o now.json
+        # 然后发生了什么
+    validations:
+      required: true
+  - type: textarea
+    id: expected-actual
+    attributes:
+      label: 预期 vs 实际
+      description: 你期望的结果，与实际得到的结果。
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已搜索过已有 issue，确认不是重复问题
+          required: true
+        - label: 我贴出的日志已脱敏（无 token、私有仓库名、个人邮箱）
+          required: true

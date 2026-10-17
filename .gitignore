@@ -1,0 +1,7 @@
+# 本地运行产物（snapshot / survey 的输出），不必入库
+now.json
+baseline.json
+
+__pycache__/
+*.py[cod]
+.venv/

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "📖 使用说明（README）"
+    url: https://github.com/pj1433139082-hue/github-repo-settings#readme
+    about: 安装、六步流程、四条硬纪律与已知限制，先看这份。
+  - name: "🔐 安全漏洞（私有报告）"
+    url: https://github.com/pj1433139082-hue/github-repo-settings/security/advisories/new
+    about: 不要在公开 issue 里贴 token、私有地址或未修复的漏洞细节。
